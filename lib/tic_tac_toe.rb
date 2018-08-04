@@ -45,10 +45,10 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     if valid_move?(@board, user_input) == true
       move(@board, user_input, current_player(board))
       display_board(@board)
-  else
-    turn(board)
-  end 
-end
+    else
+      turn(board)
+    end 
+  end
 
 def turn_count(board)
   counter = board.count("X") + board.count("O")
