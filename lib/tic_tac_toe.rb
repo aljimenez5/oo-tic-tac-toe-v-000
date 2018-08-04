@@ -32,7 +32,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
   end
   
   def valid_move?(user_input)
-    if position_taken?(@board, user_input) == false && index.between?(0, 8)
+    if position_taken?(@board, user_input) == false && user_input.between?(0, 8)
       true
     else
       false
