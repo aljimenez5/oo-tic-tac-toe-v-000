@@ -55,15 +55,15 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     return counter
   end
 
-def current_player(board)
-  if turn_count(board) == 1
-    return "O"
-  elsif turn_count(board) % 2 == 0
-    return "X"
-  else turn_count(board) % 3 == 0
-    return "O"
+  def current_player
+    if turn_count(board) == 1
+      return "O"
+    elsif turn_count(board) % 2 == 0
+      return "X"
+    else turn_count(board) % 3 == 0
+      return "O"
+    end
   end
-end
 
 def won?(board)
   for combination in WIN_COMBINATIONS do
