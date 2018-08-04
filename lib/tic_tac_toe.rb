@@ -50,7 +50,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     end 
   end
 
-  def turn_count
+  def turn_count(@baord)
     counter = @board.count("X") + @board.count("O")
     return counter
   end
