@@ -23,7 +23,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     @board[user_input] = token
   end
   
-  def position_taken?(board, index)
+  def position_taken?(@board, index)
     if @board[index] == "X" || @board[index] == "O"
       true
     else
@@ -31,7 +31,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     end
   end
   
-  def valid_move?(board, index)
+  def valid_move?(@board, index)
     if position_taken?(@board, index) == false && index.between?(0, 8)
       true
     else
