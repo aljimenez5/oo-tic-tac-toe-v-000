@@ -46,7 +46,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
       move(@board, user_input, current_player(@board))
       display_board(@board)
     else
-      turn(board)
+      turn(@board)
     end 
   end
 
