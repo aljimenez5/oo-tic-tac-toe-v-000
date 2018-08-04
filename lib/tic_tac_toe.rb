@@ -100,14 +100,14 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     end
   end
   
-  def play(board)
-    until over?(board) do
-      turn(board)
+  def play
+    until over?(@board) do
+      turn(@board)
     end
-      if won?(board) 
-        win = winner(board)
+      if won?(@board) 
+        win = winner(@board)
         puts "Congratulations #{win}!"
-      elsif draw?(board)
+      elsif draw?(@board)
         puts "Cat's Game!"
       end
   end
