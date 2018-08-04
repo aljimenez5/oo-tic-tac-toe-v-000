@@ -73,45 +73,45 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     end
     return false
   end
-
-def full?(board)
-  board.none? { |empty_index| empty_index == " "}
-end
-
-def draw?(board)
-  if full?(board) && !won?(board)
-    return true
-  else
-    return false
-  end
-end
-
-def over?(board)
-  if won?(board) || draw?(board) || full?(board) 
-    return true
-  else
-    return false
-  end
-end
-
-def winner(board)
-  if won?(board) 
-    board[won?(board)[0]]
-  end
-end
-
-def play(board)
-  until over?(board) do
-    turn(board)
-  end
-    if won?(board) 
-      win = winner(board)
-      puts "Congratulations #{win}!"
-    elsif draw?(board)
-      puts "Cat's Game!"
-    end
-end
   
+  def full?(board)
+    board.none? { |empty_index| empty_index == " "}
+  end
+  
+  def draw?(board)
+    if full?(board) && !won?(board)
+      return true
+    else
+      return false
+    end
+  end
+  
+  def over?(board)
+    if won?(board) || draw?(board) || full?(board) 
+      return true
+    else
+      return false
+    end
+  end
+  
+  def winner(board)
+    if won?(board) 
+      board[won?(board)[0]]
+    end
+  end
+  
+  def play(board)
+    until over?(board) do
+      turn(board)
+    end
+      if won?(board) 
+        win = winner(board)
+        puts "Congratulations #{win}!"
+      elsif draw?(board)
+        puts "Cat's Game!"
+      end
+  end
+    
   
   
   
