@@ -31,8 +31,8 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     end
   end
   
-  def valid_move?(user_input)
-    if position_taken?(user_input) == false && user_input.between?(0, 8)
+  def valid_move?(user_input_index)
+    if position_taken?(user_input_index) == false && user_input_index.between?(0, 8)
       true
     else
       false
