@@ -78,8 +78,8 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     @board.none? { |empty_index| empty_index == " "}
   end
   
-  def draw?(board)
-    if full?(board) && !won?(board)
+  def draw?
+    if full?(@board) && !won?(b
       return true
     else
       return false
