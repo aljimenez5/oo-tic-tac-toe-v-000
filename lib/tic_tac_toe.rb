@@ -43,7 +43,7 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
     puts "Please enter 1-9:"
     user_input = input_to_index(gets.strip)
     if valid_move?(user_input) == true
-      move(@board, user_input, current_player(@board))
+      move(user_input, current_player)
       display_board(@board)
     else
       turn(@board)
