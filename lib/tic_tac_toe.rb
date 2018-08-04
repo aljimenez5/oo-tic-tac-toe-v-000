@@ -57,11 +57,11 @@ WIN_COMBINATIONS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
   end
 
   def current_player
-    if turn_count(@board) == 1
+    if turn_count == 1
       return "O"
-    elsif turn_count(@board) % 2 == 0
+    elsif turn_count % 2 == 0
       return "X"
-    else turn_count(@board) % 3 == 0
+    else turn_count % 3 == 0
       return "O"
     end
   end
