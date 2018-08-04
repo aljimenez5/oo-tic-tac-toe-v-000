@@ -4,4 +4,4 @@ require_relative '../lib/tic_tac_toe.rb'
 
 game = TicTacToe.new
 puts "Welcome to Tic Tac Toe!"
-play(game)
+game.play
